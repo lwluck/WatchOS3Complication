@@ -17,7 +17,8 @@ extension SessionManager: ComplicationUpdateDelegate {
         print("Reloading complications for: \(complicationServer.activeComplications)")
         for complication in (complicationServer.activeComplications ?? []) {
             print("extendingComplication!")
-            complicationServer.extendTimeline(for: complication)
+        //  complicationServer.extendTimeline(for: complication)
+            complicationServer.reloadTimeline(for: complication)
         }
     }
 
